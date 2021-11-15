@@ -1,0 +1,120 @@
+.footer{
+   margin-top: 150px;
+   position: relative;
+
+   &::before{
+      content: '';
+      width: 528px;
+      height: 231px;
+      display: block;
+      position: absolute;
+      z-index: -1;
+      background-image: url(../images/bgpattern/bg-pattern-footer-desktop.svg);
+      background-repeat: no-repeat;
+
+      @include tablet{
+         display: none;
+      }
+      @include mobile{
+         width: 100%;
+         display: block;
+         background-image: url(../images/bgpattern/bg-pattern-footer-mobile.svg);
+      }
+   }
+}
+
+.footer__container{
+   max-width: 1200px;
+   margin: 0 auto;
+   padding-top: 60px;
+   padding-bottom: 40px;
+}
+
+.footer__socialmedia{
+   margin: 0 15px;
+   padding-bottom: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-bottom: 1px solid rgba(
+      $color: $Dark-Grayish-Violet, 
+      $alpha: .3);
+ 
+   .footer__socialmedia__container{
+
+      li{
+         display: inline-block;
+
+         a{
+            padding-left: 12px;
+            display: block;
+
+            img{
+               &:hover{
+                  filter:brightness(40%);
+                  transition: filter 0.2s;
+               }
+            }
+            
+            @include mobile{
+               margin-top: 25px;
+            }
+         }
+      }
+   }
+
+   @include mobile{
+      flex-direction: column;
+      justify-content: center;
+   }
+}
+
+.footer__navlink{ 
+   display: flex;
+
+   @include mobile{
+      text-align: center;
+      flex-direction: column;
+   }
+}
+
+.footer__navlink__item{
+   margin: 0 15px;
+   flex: 1;
+
+   .footer__navlink__title{
+      margin-top: 35px;
+      margin-bottom: 20px;
+      display: block;
+      font-family: $font-Karla;
+      color: $Dark-Grayish-Violet;
+      font-size: 0.875em; //14
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+   }
+
+   li{
+      display: flex;
+
+      a{
+         padding: 7px 0;
+         display: block;
+         color: $Dark-Violet;
+         font-family: $font-Karla;
+         font-size: 0.875em; //14
+         font-weight: 700;
+         letter-spacing: 1px;
+         text-transform: uppercase;
+      
+         &:hover{
+            text-decoration: underline;
+            transition: text-decoration 0.2s;
+         }
+      }
+
+      @include mobile{
+         justify-content: center;
+      }
+   }
+}

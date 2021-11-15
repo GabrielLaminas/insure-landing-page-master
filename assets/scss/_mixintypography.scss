@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+$font-Dm-Serif-Display: 'DM Serif Display', serif;  
+$font-Karla: 'Karla', sans-serif;
+
+@mixin button-header {
+   margin-left: 20px;
+   padding: 12px 28px;
+   display: inline-block;
+   border: 2px solid $Dark-Violet;
+   color: $Dark-Violet;
+   font-size: 0.875em;
+   font-weight: 700;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+
+   &:hover{
+      background-color: $Very-Dark-Violet;
+      color: $Very-LightGray;
+      transition: background-color 0.2s;
+   }
+}
+
+@mixin button-transparent-white { 
+   padding: 12px 28px;
+   display: inline-block;
+   border: 2px solid $Very-LightGray;
+   color: $Very-LightGray;
+   font-family: $font-Karla;
+   font-size: 0.875em;
+   font-weight: 700;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+
+   &:hover{
+      background-color: $Very-LightGray;
+      color: $Dark-Violet;
+      transition: background-color 0.2s;
+   }
+}

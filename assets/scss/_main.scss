@@ -1,0 +1,163 @@
+.main{
+   position: relative;
+   background-color: $Dark-Violet;
+   
+   &::before{
+      content: '';
+      width: 195px;
+      height: 504px;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 72%;
+      background-image: url(../images/bgpattern/bg-pattern-intro-left-desktop.svg);
+      background-repeat: no-repeat;
+      
+      @include laptop{
+         display: none;
+      }
+      @include tablet{
+         display: none;
+      }
+   }
+
+   &::after{
+      content: '';
+      width: 436px;
+      height: 593px;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 2;
+      background-image: url(../images/bgpattern/bg-pattern-intro-right-desktop.svg);
+      background-repeat: no-repeat;
+      
+      @include laptop{
+         display: none;
+      }
+      @include tablet{
+         display: none;
+      }
+      @include mobile{
+         width: 124px;
+         height: 330px;
+         display: inherit;
+         position: absolute;
+         right: 0;
+         top: 84%;
+         background-image: url(../images/bgpattern/bg-pattern-intro-right-mobile.svg);
+      }
+   }
+}
+
+.main__container{
+   max-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   position: relative;
+
+   @include tablet{
+      flex-direction: column-reverse;
+   }
+}
+
+.main__content{
+   margin: 20px 0;
+   padding: 0 15px;
+   flex: 1 0 400px;
+
+   .main__title{
+      max-width: 460px;
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 3;
+      color: $Very-LightGray;
+      font-family: $font-Dm-Serif-Display;
+      font-size: 4em;
+      font-weight: 400;
+      line-height: 58px;
+
+      &::before{
+         content: '';
+         width: 130px;
+         height: 1px;
+         margin-bottom: 50px;
+         display: block;
+         background-color: $Very-LightGray;
+
+         @include tablet{
+            display: none;
+         }
+      }
+
+      @include tablet{
+         max-width: 100%;
+      }
+      @include mobile{
+         font-size: 2.8125em;
+         line-height: 48px;
+      }
+
+   }
+   .main__bodytext{
+      max-width: 540px;
+      margin-bottom: 30px;
+      color: $Very-LightGray;
+      font-family: $font-Karla;
+      font-weight: 400;
+      line-height: 26px;
+      
+      @include tablet{
+         max-width: 100%;
+      }
+   }
+   .btn{
+      position: relative;
+      z-index: 2;
+      @include button-transparent-white;
+   }
+
+   @include tablet{
+      text-align: center;
+      padding: 0 20px;
+      margin-top: 100px;
+      margin-bottom: 0px;
+   }
+   @include mobile{
+      margin-top: 80px;
+      margin-bottom: 20px;
+   }
+}
+
+.main__img{
+   flex: 1 0 300px;
+   padding: 0 15px;
+   position: relative;
+   top: 142px;
+   z-index: 1;
+
+   @include laptop{
+      top: 0;
+   }
+
+   @include tablet{
+      padding: 0;
+      top: 0;
+   }
+   @include mobile{
+      &::before{
+         content: '';
+         display: block;
+         width: 168px;
+         height: 584px;
+         position: absolute;
+         left: 0;
+         bottom: -570px;
+         z-index: -1;
+         background-image: url(../images/bgpattern/bg-pattern-intro-left-mobile.svg);
+         background-repeat: no-repeat;
+      }
+   }
+}

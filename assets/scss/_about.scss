@@ -1,0 +1,76 @@
+.about{
+   max-width: 1170px;
+   margin: 0 auto;
+   padding: 60px 80px;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+   background-color: $Dark-Violet;
+
+   &::after{
+      content: '';
+      width: 434px;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-image: url(../images/bgpattern/bg-pattern-how-we-work-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include tablet{
+         display: none;
+      }
+      @include mobile{
+         width: 176px;
+         display: block;
+         background-image: url(../images/bgpattern/bg-pattern-how-we-work-mobile.svg);
+         background-size: contain;
+      }
+   }
+
+   .about__text{
+      max-width: 503px;
+      padding-bottom: 10px;
+      position: relative;
+      z-index: 2;
+      color: $Very-LightGray;
+      font-family: $font-Dm-Serif-Display;
+      font-size: 3.5em;
+      line-height: 60px;
+
+      @include tablet{
+         max-width: 100%;
+         text-align: center;
+         flex-direction: column;
+      }
+      @include mobile{
+         font-size: 2.875em;
+      }
+   }
+   .btn{
+      position: relative;
+      z-index: 2;
+      @include button-transparent-white;
+
+      @include tablet{
+         margin-top: 40px;
+      }
+   }
+
+   @include laptop{
+      padding: 60px 50px;
+   }
+
+   @include tablet{
+      padding: 60px;
+      flex-direction: column;
+      text-align: center;
+   }
+   @include mobile{
+      padding: 80px 40px;
+   }
+}
