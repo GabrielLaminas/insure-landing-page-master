@@ -1,6 +1,6 @@
 # Frontend Mentor - Insure landing page
 
-![Design preview for the Insure landing page coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Insure landing page coding challenge](https://github.com/GabrielLaminas/insure-landing-page-master/blob/main/assets/design/desktop-preview.jpg?raw=true)
 
 ## Welcome! 👋
 
